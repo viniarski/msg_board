@@ -62,7 +62,7 @@ textarea::placeholder {
     color: #12372A;
 }
 
-#post {
+#submit {
     border: none;
     border-radius: 10px;
     color: #12372A;
@@ -71,7 +71,7 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-#post:hover {
+#submit:hover {
     background-color: #12372A;
     color: #ADBC9F;
 }
