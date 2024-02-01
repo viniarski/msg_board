@@ -6,12 +6,12 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #FFF3CF;
-  color: #637a9f;
+  background-color: #ADBC9F;
+  color: #12372A;
 }
 
 #top {
-    background-color: #E8C872;
+    background-color: #12372A;
     margin: 0;
     padding: 1.5rem;
 }
@@ -19,7 +19,7 @@ body {
 /* form, textarea and button */
 
 .container {
-    background-color: #637a9f;
+    background-color: #436850;
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@ input {
 input::placeholder {
     padding: 5px;
     letter-spacing: 0.5px;
-    color: #637a9f;
+    color: #12372A;
 }
 
 textarea {
@@ -59,20 +59,21 @@ textarea {
 textarea::placeholder {
     padding: 5px;
     letter-spacing: -0.5px;
-    color: #637a9f;
+    color: #12372A;
 }
 
 #post {
     border: none;
     border-radius: 10px;
-    color: #637a9f;
+    color: #12372A;
     width: 80px;
     height: 35px;
     cursor: pointer;
 }
 
 #post:hover {
-    background-color: #C9D7DD;
+    background-color: #12372A;
+    color: #ADBC9F;
 }
 
 /* logo and meaning message when mouseover logo */
@@ -80,6 +81,10 @@ textarea::placeholder {
 #mic-logo {
     width: 4rem;
     height: auto;
+}
+
+#logo {
+    width: 180px;
 }
 
 #logoBox {
@@ -93,8 +98,9 @@ textarea::placeholder {
   font-size: 1.5rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   top: 45px;
-  left: 270px;
+  left: 280px;
   background-color: none;
+  color: #ADBC9F;
   padding: 10px;
 
 }
