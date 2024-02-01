@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF3CF;
+  color: #637a9f;
+}
+
+#top {
+    background-color: #E8C872;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+/* form, textarea and button */
+
+.container {
+    background-color: #637a9f;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#message-form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    padding-left: 15px;
+    padding: 10px 15px;
+}
+
+input::placeholder {
+    padding: 5px;
+    letter-spacing: 0.5px;
+    color: #637a9f;
+}
+
+textarea {
+    resize: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+textarea::placeholder {
+    padding: 5px;
+    letter-spacing: -0.5px;
+    color: #637a9f;
+}
+
+#post {
+    border: none;
+    border-radius: 10px;
+    color: #637a9f;
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#post:hover {
+    background-color: #C9D7DD;
+}
+
+/* logo and meaning message when mouseover logo */
+
+#mic-logo {
+    width: 4rem;
+    height: auto;
+}
+
+#logoBox {
+  position: relative;
+  display: inline-block;
+}
+
+#meaning {
+  position: absolute;
+  font-family: 'Gochi Hand', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  top: 45px;
+  left: 270px;
+  background-color: none;
+  padding: 10px;
+
+}
+
+@media (max-width: 600px) {
+    #meaning {
+        display: none !important;
+    }
+}

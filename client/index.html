@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paroli</title>
+    <link rel="shortcut icon" href="./public/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div id="top">
+      <div id="logoBox">
+        <img id="mic-logo" src="./public/assets/img_logo.png" alt="microphone" />
+        <img id="logo" src="./public/assets/logo.png" alt="logo paroli" />
+      </div>
+      <h1 id="meaning"></h1>
+    </div>
+    <div class="container">
+      <form id="message-form">
+        <label for="username"></label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          name="username"
+          required
+        />
+        <label for="message"></label>
+        <textarea
+          type="text"
+          id="message"
+          placeholder="Leave a message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+        <button id="post" type="button">Post</button>
+      </form>
+    </div>
+    <div id="message-list"></div>
+  </body>
+</html>
