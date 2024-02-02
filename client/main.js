@@ -1,8 +1,7 @@
 const form = document.getElementById("message-form");
 const messageList = document.getElementById("message-list");
 
-
-const baseURL = import.meta.env.VITE_Server
+const baseURL = import.meta.env.VITE_Server;
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -56,18 +55,18 @@ async function displayMessages() {
     likeCount.setAttribute("class", "like-count");
 
     // del button
-    delButton.addEventListener('click', (event) => {
-      event.preventDefault()
-      handleDelete(message.id)
-    })
+    delButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      handleDelete(message.id);
+    });
 
-    likeButton.addEventListener('click', async (event) => {
+    likeButton.addEventListener("click", async (event) => {
       event.preventDefault();
       await handleLike(message.id);
       displayMessages();
     });
 
-    messageList.appendChild(messageDiv)
+    messageList.appendChild(messageDiv);
     messageDiv.appendChild(h3Tag);
     messageDiv.appendChild(pTag);
     messageDiv.appendChild(buttonDiv);
@@ -81,19 +80,33 @@ displayMessages();
 
 async function handleDelete(id) {
   const result = await fetch(`${baseURL}/board/${id}`, {
-    method: "DELETE"
-  })
-  console.log(result)
+    method: "DELETE",
+  });
+  console.log(result);
   if (result.ok) {
-    displayMessages()
+    displayMessages();
   }
 }
 
 async function handleLike(id) {
   const result = await fetch(`${baseURL}/board/like/${id}`, {
-    method: "PUT"
+    method: "PUT",
   });
   if (result.ok) {
-    displayMessages()
+    displayMessages();
   }
 }
+
+// some extras!
+
+const logo = document.getElementById("logoBox");
+const meaning = document.getElementById("meaning");
+
+logo.addEventListener("mouseover", function () {
+  meaning.textContent = 'in Esperanto means "To speak"';
+  meaning.style.display = "block";
+});
+
+logo.addEventListener("mouseout", function () {
+  meaning.style.display = "none";
+});
