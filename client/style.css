@@ -1,162 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ADBC9F;
-  color: #12372A;
+  background-color: #adbc9f;
+  color: #12372a;
 }
 
 #top {
-    background-color: #12372A;
-    margin: 0;
-    padding: 1.5rem;
+  background-color: #12372a;
+  margin: 0;
+  padding: 1.5rem;
 }
 
 /* form, textarea and button */
 
 .container {
-    background-color: #436850;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+  background-color: #436850;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 #message-form {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
 }
 
 input {
-    border: none;
-    border-radius: 10px;
-    height: 35px;
-    padding-left: 15px;
-    padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  padding-left: 15px;
+  padding: 10px 15px;
 }
 
 input::placeholder {
-    padding: 5px;
-    letter-spacing: 0.5px;
-    color: #12372A;
+  padding: 5px;
+  letter-spacing: 0.5px;
+  color: #12372a;
 }
 
 textarea {
-    resize: none;
-    border-radius: 10px;
-    padding: 10px 15px;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 
 textarea::placeholder {
-    padding: 5px;
-    letter-spacing: -0.5px;
-    color: #12372A;
+  padding: 5px;
+  letter-spacing: -0.5px;
+  color: #12372a;
 }
 
 #submit {
-    border: none;
-    border-radius: 10px;
-    color: #12372A;
-    width: 80px;
-    height: 35px;
-    cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: #12372a;
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
 }
 
 #submit:hover {
-    background-color: #12372A;
-    color: #ADBC9F;
+  background-color: #12372a;
+  color: #adbc9f;
 }
 
 /* messages */
 
 .message-div {
-    background-color: #12372A;
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    max-width: 570px;
-    width: 570px;
+  background-color: #12372a;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 570px;
+  width: 100%;
 }
 
 #message-list {
-    background-color: #436850;
-    margin: 20px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+  background-color: #436850;
+  margin: 20px;
+  padding: 5px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .username {
-    color: #ADBC9F;
-    background-color: #436850;
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
+  color: #adbc9f;
+  background-color: #436850;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .username-message {
-    background-color: white;
-    color: #12372A;
-    border-radius: 10px;
-    margin: 10px;
-    max-width: 570px;
-    display: flex;
-    gap: 10px;
-    padding: 20px;
+  background-color: white;
+  color: #12372a;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 570px;
+  padding: 10px;
 }
 
 /* like and del */
 
 .button-div {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: #12372a;
+  overflow: hidden;
+}
+
+.del-button,
+.like-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .del-button {
-  background-image: url('./public/assets/del.png');
+  background-image: url("./public/assets/del.png");
   background-size: cover;
-  width: 30px;
-  height: 30px;
-  border: none;
-  outline: none;
-  cursor: pointer;
+
 }
 
 .like-button {
-    background-image: url('./public/assets/like.png');
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
+  background-image: url("./public/assets/like.png");
+  background-size: cover;
+
+}
 
 /* logo and meaning message when mouseover logo */
 
 #mic-logo {
-    width: 4rem;
-    height: auto;
+  width: 4rem;
+  height: auto;
+  margin-left: 30px;
 }
 
 #logo {
-    width: 180px;
+  width: 180px;
 }
 
 #logoBox {
@@ -166,19 +167,30 @@ textarea::placeholder {
 
 #meaning {
   position: absolute;
-  font-family: 'Gochi Hand', sans-serif;
+  font-family: "Gochi Hand", sans-serif;
   font-size: 1.5rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   top: 45px;
-  left: 280px;
+  left: 320px;
   background-color: none;
-  color: #ADBC9F;
+  color: #adbc9f;
   padding: 10px;
-
 }
 
-@media (max-width: 600px) {
-    #meaning {
-        display: none !important;
+@media (max-width: 660px) {
+  #meaning {
+    display: none !important;
+  }
+
+  .username-message {
+    max-width: 300px;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 440px) {
+    .username-message {
+      max-width: 200px;
     }
-}
+  }
+  

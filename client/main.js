@@ -1,13 +1,16 @@
 const form = document.getElementById("message-form");
 const messageList = document.getElementById("message-list");
 
+
+const baseURL = "http://localhost:4000"
+
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const formData = new FormData(form);
   const messageData = Object.fromEntries(formData);
 
-  const response = await fetch("http://localhost:4000/board", {
+  const response = await fetch(`${baseURL}/board`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +25,7 @@ form.addEventListener("submit", async function (event) {
 });
 
 async function fetchMessages() {
-  const messages = await fetch("http://localhost:4000/board");
+  const messages = await fetch(`${baseURL}/board`);
   let result = await messages.json();
   return result;
 }
@@ -50,6 +53,12 @@ async function displayMessages() {
     delButton.setAttribute("class", "del-button");
     likeButton.setAttribute("class", "like-button");
 
+    // del button
+    delButton.addEventListener('click', (event) => {
+      event.preventDefault()
+      handleDelete(message.id)
+    })
+
     messageList.appendChild(messageDiv)
     messageDiv.appendChild(h3Tag);
     messageDiv.appendChild(pTag);
@@ -60,3 +69,13 @@ async function displayMessages() {
 }
 
 displayMessages();
+
+async function handleDelete(id) {
+  const result = await fetch(`${baseURL}/board/${id}`, {
+    method: "DELETE"
+  })
+  console.log(result)
+  if (result.ok) {
+    displayMessages()
+  }
+}

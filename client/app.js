@@ -1,6 +1,6 @@
 // some extras!
 
-const logo = document.getElementById("logo");
+const logo = document.getElementById("logoBox")
 const meaning = document.getElementById("meaning");
 
 logo.addEventListener("mouseover", function () {

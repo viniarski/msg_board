@@ -47,6 +47,16 @@ app.post("/board", (req, res) => {
   }
 });
 
+app.delete('/board/:id', (req, res) => {
+  try {
+      const id = req.params.id
+      const deletedMessage = db.prepare(`DELETE FROM board WHERE id = ? `).run(id)
+      res.status(200).json({recordDeleted: deletedMessage})
+  } catch (err) {
+      res.status(500).json({error: err})
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
