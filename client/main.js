@@ -32,16 +32,30 @@ async function displayMessages() {
 
   messageList.innerHTML = "";
   messages.forEach((message) => {
+    let messageDiv = document.createElement("div");
+    messageDiv.setAttribute("class", "message-div");
+
     let h3Tag = document.createElement("h3");
     let pTag = document.createElement("p");
-    // let delButton = document.createElement('button')
-    // let likeButton = document.createElement('button')
+    let delButton = document.createElement("img");
+    let likeButton = document.createElement("img");
+
+    let buttonDiv = document.createElement(`div`);
+    buttonDiv.setAttribute("class", "button-div");
 
     h3Tag.textContent = message.username;
     pTag.textContent = message.message;
+    h3Tag.setAttribute("class", "username");
+    pTag.setAttribute("class", "username-message");
+    delButton.setAttribute("class", "del-button");
+    likeButton.setAttribute("class", "like-button");
 
-    messageList.appendChild(h3Tag);
-    messageList.appendChild(pTag);
+    messageList.appendChild(messageDiv)
+    messageDiv.appendChild(h3Tag);
+    messageDiv.appendChild(pTag);
+    messageDiv.appendChild(buttonDiv);
+    buttonDiv.appendChild(likeButton);
+    buttonDiv.appendChild(delButton);
   });
 }
 

@@ -76,6 +76,78 @@ textarea::placeholder {
     color: #ADBC9F;
 }
 
+/* messages */
+
+.message-div {
+    background-color: #12372A;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 570px;
+    width: 570px;
+}
+
+#message-list {
+    background-color: #436850;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.username {
+    color: #ADBC9F;
+    background-color: #436850;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.username-message {
+    background-color: white;
+    color: #12372A;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 570px;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* like and del */
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.del-button {
+  background-image: url('./public/assets/del.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.like-button {
+    background-image: url('./public/assets/like.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
 /* logo and meaning message when mouseover logo */
 
 #mic-logo {
