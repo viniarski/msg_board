@@ -10,7 +10,7 @@ body {
   color: #12372a;
 }
 
-#top {
+.top {
   background-color: #12372a;
   margin: 0;
   padding: 1.5rem;
@@ -127,15 +127,23 @@ textarea::placeholder {
   gap: 10px;
   background-color: #12372a;
   overflow: hidden;
+  align-items: center;
 }
 
-.del-button,
+.del-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+}
+
 .like-button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
+ 
 .del-button {
   background-image: url("./public/assets/del.png");
   background-size: cover;
@@ -145,7 +153,10 @@ textarea::placeholder {
 .like-button {
   background-image: url("./public/assets/like.png");
   background-size: cover;
+}
 
+.like-count {
+  color: white;
 }
 
 /* logo and meaning message when mouseover logo */

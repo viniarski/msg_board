@@ -40,8 +40,8 @@ async function displayMessages() {
 
     let h3Tag = document.createElement("h3");
     let pTag = document.createElement("p");
-    let delButton = document.createElement("img");
-    let likeButton = document.createElement("img");
+    let delButton = document.createElement("div");
+    let likeButton = document.createElement("div");
     let likeCount = document.createElement("p");
     let buttonDiv = document.createElement(`div`);
     buttonDiv.setAttribute("class", "button-div");
