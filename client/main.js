@@ -18,6 +18,7 @@ form.addEventListener("submit", async function (event) {
   });
   if (response.ok) {
     displayMessages();
+    form.reset();
   } else {
     console.error("Failed to post message", response.status);
   }
