@@ -42,16 +42,18 @@ async function displayMessages() {
     let pTag = document.createElement("p");
     let delButton = document.createElement("img");
     let likeButton = document.createElement("img");
-
+    let likeCount = document.createElement("p");
     let buttonDiv = document.createElement(`div`);
     buttonDiv.setAttribute("class", "button-div");
 
     h3Tag.textContent = message.username;
     pTag.textContent = message.message;
+    likeCount.textContent = `Likes: ${message.likes}`;
     h3Tag.setAttribute("class", "username");
     pTag.setAttribute("class", "username-message");
     delButton.setAttribute("class", "del-button");
     likeButton.setAttribute("class", "like-button");
+    likeCount.setAttribute("class", "like-count");
 
     // del button
     delButton.addEventListener('click', (event) => {
@@ -59,10 +61,17 @@ async function displayMessages() {
       handleDelete(message.id)
     })
 
+    likeButton.addEventListener('click', async (event) => {
+      event.preventDefault();
+      await handleLike(message.id);
+      displayMessages();
+    });
+
     messageList.appendChild(messageDiv)
     messageDiv.appendChild(h3Tag);
     messageDiv.appendChild(pTag);
     messageDiv.appendChild(buttonDiv);
+    buttonDiv.appendChild(likeCount);
     buttonDiv.appendChild(likeButton);
     buttonDiv.appendChild(delButton);
   });
@@ -75,6 +84,15 @@ async function handleDelete(id) {
     method: "DELETE"
   })
   console.log(result)
+  if (result.ok) {
+    displayMessages()
+  }
+}
+
+async function handleLike(id) {
+  const result = await fetch(`${baseURL}/board/like/${id}`, {
+    method: "PUT"
+  });
   if (result.ok) {
     displayMessages()
   }

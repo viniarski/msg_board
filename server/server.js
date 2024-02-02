@@ -60,3 +60,17 @@ app.delete('/board/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
+
+
+// put - likes!
+app.put('/board/like/:id', (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedLikes = db
+      .prepare(`UPDATE board SET likes = likes + 1 WHERE id = ?`)
+      .run(id).changes;
+    res.status(200).json({ likes: updatedLikes });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+});
