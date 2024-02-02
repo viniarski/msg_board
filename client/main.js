@@ -2,7 +2,7 @@ const form = document.getElementById("message-form");
 const messageList = document.getElementById("message-list");
 
 
-const baseURL = "https://msg-board-server-49n4.onrender.com"
+const baseURL = import.meta.env.VITE_Server
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
