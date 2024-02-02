@@ -2,7 +2,7 @@ const form = document.getElementById("message-form");
 const messageList = document.getElementById("message-list");
 
 
-const baseURL = "http://localhost:4000"
+const baseURL = "https://msg-board-server-49n4.onrender.com"
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
