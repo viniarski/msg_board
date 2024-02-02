@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import Database from "better-sqlite3";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const PORT = "4000";
 const app = express();
